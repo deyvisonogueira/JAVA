@@ -3,15 +3,15 @@ package geometria;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		Quadrado quadrado1 = new Quadrado(); 
-		
-		
-		
-		double areaQuadrado1 = quadrado1.calculaArea();
-		
-		System.out.println("Area do quadrado: " + areaQuadrado1);
 
+		// Teste da classe Quadrado
+		Quadrado primeiroQuadrado = new Quadrado();
+		primeiroQuadrado.setLado(12);
+		
+		double areaPrimeiroQuadrado = primeiroQuadrado.calculaArea();
+		System.out.println("Area quadrado: " + areaPrimeiroQuadrado);
+		
+		System.out.println("Desenho quadrado: ");
+		primeiroQuadrado.desenhar();
 	}
-
 }
