@@ -2,40 +2,41 @@ package geometria;
 
 public class Retangulo {
 	// Atributos
-	
-	private double lado, altura;
-	
-	// Métodos
-	public void setLado(double lado) {
-		if (lado > 0) {
-			this.lado = lado;
-		}
-	}
-	public void setAltura(double altura) {
-		if (altura > 0) {
-			this.altura = altura;
-		}
-	}
-	
-	public double calculaArea() {
-		double area = lado * altura;
+		private double base;
+		private double altura;
 		
-		return area; 
-	}
-	
-	public void desenhar() {
-		for (int i = 0; i < altura; i++) {
-			System.out.print(". ");
-			
-			for (int j = 0; j < lado; j++) {
-				if (i == 0 || i + 1 >= altura) {
-					System.out.print(". ");
-				} else {
-					System.out.print("  ");
-				}
+		// MÃ©todos
+		public void setBase(double base) {
+			if (base > 0) {
+				this.base = base;
 			}
-			
-			System.out.println(".");
 		}
-	}
+		
+		public void setAltura(double altura) {
+			if (altura > 0) {
+				this.altura = altura;
+			}
+		}
+		
+		public double calculaArea() {
+			double area = base * altura;
+				
+			return area; 
+		}
+		
+		public void desenhar() {
+			for (int i = 0; i < base; i++) {
+				System.out.print(". ");
+					
+				for (int j = 0; j < altura; j++) {
+					if (i == 0 || i + 1 >= altura) {
+						System.out.print(". ");
+					} else {
+						System.out.print("  ");
+					}
+				}
+					
+				System.out.println(".");
+			}
+		}
 }
