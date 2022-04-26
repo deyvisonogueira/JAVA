@@ -1,45 +1,43 @@
 package geometria;
 
-public class Circulo{
-
-	//Atributos
-				private double pi ;
-				private double raio;
+public class Circulo {
+	// Atributos
+		private double raio;
+		private double pi = 3.14;
+		private double raio2;
+			
+		// MÃ©todos
+		public void setRaio(double raio) {
+			if (raio > 0) {
+				this.raio = raio;
+			}
+		}	
+		
+		public double calculaArea() {
+			raio2 = raio * raio;
+			double area = raio2 * pi;
 				
-				//Métodos
-				public void setPi(double pi) {
-					if (pi > 0)
-						{
-						this.pi = pi;
-						}
+			return area; 
+		}
+		
+		public void desenhar() {
+			for (int i = 0; i < raio2; i++) {
+				if(i == 1) {
+					System.out.print("");
+				} else if (i == raio2) {
+					System.out.print("");
+				} else {
+					System.out.print(".");
 				}
-				
-				
-				public void setRaio(double raio) {
-					if (raio > 0)
-						{
-						this.raio = raio;
-						}
-				}
-				
-				public double calculaArea() {
-					double area = pi * raio * raio ;
-					return area; 
-				}
-				
-				public void desenhar() {
-					for (int i = 0; i < raio; i++) {
-						System.out.print(". ");
-						
-						for (int j = 0; j < pi; j++) {
-							if (i == 0 || i + 1 >= raio) {
-								System.out.print(". ");
-							} else {
-								System.out.print("  ");
-							}
-						}
-
+				for(int j = 0; j < raio2; j++) {
+					if(i == 1) {
+						System.out.print("");
+					} else if (i == raio2) {
+						System.out.print("");
+					} else {
+						System.out.print(".");
 					}
-					
 				}
-	}
+			}
+		}	
+}
